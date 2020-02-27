@@ -12,6 +12,6 @@ before_deploy:
 deploy:
   skip_cleanup: true
   provider: script
-  script: bin/docker_pub library/wiki harbor.revelry-prod.revelry.net
+  script: bin/docker_pub . library/wiki harbor.revelry-prod.revelry.net
   on:
     branch: master
