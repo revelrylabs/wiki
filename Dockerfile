@@ -17,4 +17,4 @@ RUN npm install && npm run build:webpack && npm install -g pm2
 
 EXPOSE 3000
 
-RUN NODE_ENV=production pm2 start index.js --name outline
+CMD NODE_ENV=production pm2 start index.js --name outline
