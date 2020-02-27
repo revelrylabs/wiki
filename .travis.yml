@@ -9,8 +9,10 @@ env:
 script: skip
 before_deploy:
   - echo $DOCKER_PASSWORD | docker login harbor.revelry-prod.revelry.net -u $DOCKER_USERNAME --password-stdin
+  - export ROLLBAR_DEPLOY_ID=$(./bin/rollbar_release started)
+after_deploy:
+  - ./bin/rollbar_release succeeded
 deploy:
-  skip_cleanup: true
   provider: script
   script: bin/docker_pub . library/wiki harbor.revelry-prod.revelry.net
   on:
