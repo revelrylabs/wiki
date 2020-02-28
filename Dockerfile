@@ -13,13 +13,13 @@ RUN wget https://github.com/outline/outline/archive/v${OUTLINE_VERSION}.tar.gz \
 
 WORKDIR /opt/app
 
-RUN npm install && npm run build:webpack && npm install -g pm2
-
 RUN mkdir bin
 
 COPY bin/migrate bin/start ./bin/
 
 RUN chmod +x  ./bin/*
+
+RUN npm install && npm run build:webpack && npm install -g pm2
 
 EXPOSE 5000
 
