@@ -1,3 +1,3 @@
-#!/bin/bash
+#!/bin/sh
 
 DATABASE_URL="postgres://$(POSTGRES_USER):$(POSTGRES_PASSWORD)@wiki-database:5432/postgres" NODE_ENV=production pm2 start index.js --name outline
