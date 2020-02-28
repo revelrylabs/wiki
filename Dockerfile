@@ -1,6 +1,13 @@
 FROM node:12-alpine
 
-ENV OUTLINE_VERSION="0.40.2"
+ENV OUTLINE_VERSION="0.40.2" \
+  URL="https://wiki.revelry-prod.revelry.net" \
+  DEPLOYMENT="self" \
+  SUBDOMAINS_ENABLED="false" \
+  WEBSOCKETS_ENABLED="true" \
+  SLACK_MESSAGE_ACTIONS="true" \
+  SLACK_APP_ID="AUNSVEESJ" \
+  SLACK_KEY="4181489804.974913490902"
 
 RUN   apk update \
   &&   apk add ca-certificates wget \
