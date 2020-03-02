@@ -3,7 +3,7 @@ FROM node:12-alpine
 ENV OUTLINE_VERSION="0.40.2" \
   URL="https://wiki.revelry-prod.revelry.net" \
   DEPLOYMENT="self" \
-  SUBDOMAINS_ENABLED="false" \
+  SUBDOMAINS_ENABLED="true" \
   WEBSOCKETS_ENABLED="true" \
   SLACK_MESSAGE_ACTIONS="true" \
   SLACK_APP_ID="AUNSVEESJ" \
