@@ -7,7 +7,8 @@ ENV OUTLINE_VERSION="0.40.2" \
   WEBSOCKETS_ENABLED="true" \
   SLACK_MESSAGE_ACTIONS="true" \
   SLACK_APP_ID="AUNSVEESJ" \
-  SLACK_KEY="4181489804.974913490902"
+  SLACK_KEY="4181489804.974913490902" \
+  SENTRY_DSN="https://9dfbfec8803a4534a64a4dda9fe6ce50@sentry.io/3486711"
 
 RUN   apk update \
   &&   apk add ca-certificates wget \
