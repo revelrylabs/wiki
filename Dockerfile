@@ -1,6 +1,6 @@
 FROM node:12-alpine
 
-ENV OUTLINE_VERSION="0.41.0" \
+ENV OUTLINE_VERSION="0.42.2" \
   URL="https://wiki.revelry-prod.revelry.net" \
   DEPLOYMENT="self" \
   SUBDOMAINS_ENABLED="false" \
